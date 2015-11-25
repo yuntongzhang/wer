@@ -65,7 +65,7 @@ for k in nbest.keys():
     if (k in refs) and (k in new_nbest):
         best = -1
         # find the entry with the closest match to reference
-        for j in range(len(nbest[k])):
+        for j in range(len(new_nbest[k])):
             (S,I,D) = compute_SID(refs[k],nbest[k][j],DEBUG)
             #print "-- %i, %i %i" % (S,I,D)
             if best == -1 or S+I+D<best[0]+best[1]+best[2]:
